@@ -2,7 +2,7 @@ import { galleryItems } from "./gallery-items.js";
 
 const galleryListEl = document.querySelector(".gallery");
 
-const markup = galleryItems
+const galleryMarkup = galleryItems
   .map(
     ({ preview, original, description }) =>
       `<li class="gallery__item">
@@ -18,7 +18,7 @@ const markup = galleryItems
   )
   .join("");
 
-galleryListEl.insertAdjacentHTML("beforeend", markup);
+galleryListEl.insertAdjacentHTML("beforeend", galleryMarkup);
 galleryListEl.addEventListener("click", onContainerImages);
 
 const instance = basicLightbox.create(`
